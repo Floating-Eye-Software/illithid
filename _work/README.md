@@ -8,10 +8,12 @@ Illithid NetHack service.
 Illithid owns service-level planning, tasks, cross-component release decisions,
 migration acceptance criteria, and verification evidence for work performed
 against the upstream-derived `dgamelaunch` and Floating Eye `nethack` source
-repositories.
+repositories. It also owns the service landing-page content under
+`site/illithid.floatingeye.net/`.
 
-Source changes remain in those source repositories. Host, backup, monitoring,
-DNS/TLS, SSH endpoint, and public-web operations remain in `site-ops`.
+Game and launcher source changes remain in those source repositories. Host,
+backup, monitoring, DNS/TLS, SSH endpoint, public-web deployment, and live-site
+verification remain in `site-ops`.
 
 ## Files
 

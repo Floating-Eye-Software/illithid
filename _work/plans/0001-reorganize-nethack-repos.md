@@ -74,8 +74,9 @@ Current public service
 illithid
 ├── workflow authority for dgamelaunch
 ├── workflow authority for nethack
+├── owns the public service landing-page source
 ├── coordinates service releases and migration evidence
-└── delegates host and public-web operations to site-ops
+└── delegates host and public-web deployment operations to site-ops
 
 Future engine and learning stack
 
@@ -93,8 +94,8 @@ replace any of these execution workflows.
 
 | Repository | Identity | Owns | Must not own |
 | --- | --- | --- | --- |
-| `illithid` | FLEY public-service integration repository | service plans and tasks; dgamelaunch and game-version integration; release manifests; multi-version dispatch; save-migration test evidence; service-level acceptance and rollback coordination | raw production state; credentials; unrelated Nexus product direction |
-| `site-ops` | FLEY infrastructure and public-surface operations repository | Droplet inventory and provisioning; OS and host controls; DNS, TLS, SSH endpoint operations; backups and restore operations; monitoring; public web deployment; protected operational receipts | NetHack engine design; NLE5 API design; service product priorities |
+| `illithid` | FLEY public-service integration repository | service plans and tasks; dgamelaunch and game-version integration; release manifests; multi-version dispatch; save-migration test evidence; service-level acceptance and rollback coordination; public landing-page content and source | raw production state; credentials; unrelated Nexus product direction |
+| `site-ops` | FLEY infrastructure and public-surface operations repository | Droplet inventory and provisioning; OS and host controls; DNS, TLS, SSH endpoint operations; backups and restore operations; monitoring; public web deployment and verification; protected operational receipts | NetHack engine design; NLE5 API design; service product priorities; Illithid landing-page content |
 | `dgamelaunch` | upstream-derived service source repository | dgamelaunch source, upstream-compatible fixes, build-system changes, configuration examples that belong with the program | FLEY `_work`, `AGENTS.md`, service dashboards, private account or host data |
 | `nethack` | upstream-derived Floating Eye server source repository | current public-service NetHack source lineage, source patches, build hints that belong with the program | FLEY `_work`, `AGENTS.md`, Illithid service dashboards, Nexus future-world planning |
 | `nexus` | FLEY NetHack 5 engine derivative product | engine and topology changes; custom worlds and Lua levels; Nexus builds; human-playable runtime; upstream divergence records | current Illithid modernization; dgamelaunch operations; NLE5 or bot ownership |
@@ -110,9 +111,9 @@ replace any of these execution workflows.
 Illithid may consume pinned commits from `dgamelaunch` and `nethack`. Neither
 source repository depends on the Illithid workflow.
 
-Illithid coordinates with site-ops for host and public-web changes. A service
-release must reference the exact source commits and the applicable site-ops
-deployment or infrastructure evidence.
+Illithid coordinates with site-ops for host and public-web deployment changes.
+A service release must reference the exact source and content commits and the
+applicable site-ops deployment or infrastructure evidence.
 
 The current public service must not depend on Nexus until a later plan
 explicitly qualifies Nexus as a supported service game. Plan 0002 currently
@@ -170,7 +171,8 @@ Update `fley-org` to represent:
 - `illithid workflow-authority-for nethack`;
 - Nexus no longer serving as workflow authority for those current-service
   source repositories;
-- `site-ops` retaining Illithid infrastructure and public-surface operations;
+- `site-ops` retaining Illithid infrastructure and public-surface deployment
+  operations while Illithid owns the landing-page source;
 - Nexus and NLE5 remaining separate FLEY projects with the future dependency
   direction recorded without merging their workflows;
 - the future agent remaining an uncreated project until a durable proposal or
@@ -188,9 +190,9 @@ Review existing NetHack-related workflow records and route them as follows:
   `nexus/_work/integrations/dgamelaunch/` into Illithid, preserving provenance.
 - Keep Nexus product and engine records in Nexus.
 - Keep NLE5 bridge and learning-environment records in NLE5.
-- Keep host inventory, backup procedures, monitoring, DNS/TLS, and deployment
-  records in site-ops, with pointers from Illithid where service coordination
-  needs them.
+- Keep host inventory, backup procedures, monitoring, DNS/TLS, deployment
+  records, and live verification in site-ops. Keep landing-page source in
+  Illithid, with cross-repository pointers where coordination needs them.
 - Leave source code and upstream-compatible technical documentation in
   `dgamelaunch` and `nethack`.
 - Confirm that `dgamelaunch` and `nethack` contain no FLEY `_work` or
@@ -265,7 +267,8 @@ Create stable task identifiers in the Illithid dashboard for at least:
 - Illithid has a confirmed repository identity and an adopted local workflow;
 - plans 0001 and 0002 are registered and mechanically valid;
 - Illithid is the recorded workflow authority for `dgamelaunch` and `nethack`;
-- site-ops remains authoritative for Illithid host and public-web operations;
+- site-ops remains authoritative for Illithid host and public-web deployment
+  operations, while Illithid owns the landing-page source;
 - Nexus owns only the future engine/product work described here;
 - NLE5 owns only the bridge and learning-environment interface work described
   here;

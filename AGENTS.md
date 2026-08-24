@@ -29,12 +29,15 @@ Check `git status` before editing and preserve unrelated user changes.
 
 - Illithid owns public-service integration work spanning dgamelaunch and the
   Floating Eye NetHack runtime.
+- Illithid owns the public landing-page content and source under
+  `site/illithid.floatingeye.net/`.
 - Implementation commits remain in the applicable `dgamelaunch` or `nethack`
   source repository and are referenced from Illithid plans and tasks.
 - Do not add FLEY `_work/` or `AGENTS.md` files to those upstream-derived
   source repositories.
 - Route host provisioning, operating-system controls, DNS, TLS, SSH endpoint
-  operations, backups, monitoring, and public-web deployment to `site-ops`.
+  operations, backups, monitoring, public-web deployment, and live-site
+  verification to `site-ops`.
 - Route future Nexus engine/product work to `nexus` and learning-environment
   adapter work to `nle5`.
 - Route organization topology and portfolio coordination to `fley-org`.

@@ -77,7 +77,7 @@ Recommended boundaries:
 
 Tasks:
 
-1. Open a dedicated Illithid infrastructure change record and assign one accountable service owner. Track web changes in `site-ops`; track game/build changes in the appropriate NetHack and dgamelaunch repositories.
+1. Open a dedicated Illithid infrastructure change record and assign one accountable service owner. Track landing-page content in Illithid, web deployment and live verification in `site-ops`, and game/build changes in the appropriate NetHack and dgamelaunch repositories.
 2. Capture a read-only inventory:
    - OS/packages, filesystem usage, memory, swap, and inode use;
    - SSH/DNS/TLS endpoints and host-key fingerprints;
@@ -220,7 +220,8 @@ Tasks:
 | DGL and multi-version dispatch | Game service maintainer | dgamelaunch/config source | Migration test report |
 | NH5 build and legacy runtime | NetHack maintainer | NetHack/build source | Reproducible build manifest |
 | Backup, restore, monitoring | Site operations | `site-ops` plus private receipts | Restore report and alert tests |
-| Public site and artifact publishing | Site operations | `site-ops` | Live verification record |
+| Public-site content | Illithid service owner | `illithid/site/illithid.floatingeye.net/` | Reviewed static source and service claims |
+| Public-site and artifact deployment | Site operations | `site-ops` | Backup-gated deployment and live verification record |
 | Score generator/player/editor | Web maintainer | Reviewed public code repository | Automated tests and security review |
 | External scoreboard/tournament | Service owner | Integration record | Confirmed ingestion |
 | Closure | Service owner/approver | Change record | Acceptance criteria met and explicit approval |

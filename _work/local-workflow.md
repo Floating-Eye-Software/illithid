@@ -7,6 +7,8 @@ and production-safety rules.
 
 - Keep public-service integration plans, tasks, release manifests, migration
   criteria, multi-version dispatch decisions, and service acceptance here.
+- Keep public landing-page content and source under
+  `site/illithid.floatingeye.net/`.
 - Reference exact implementation commits from `dgamelaunch` and `nethack`;
   do not duplicate their source history or add FLEY workflow files to them.
 - Keep Nexus future-engine work and NLE5 adapter work in their own workflows.
@@ -16,7 +18,9 @@ and production-safety rules.
 Coordinate infrastructure changes with `site-ops`. Illithid may define the
 service outcome and acceptance criteria, while `site-ops` owns host changes,
 backups and restore operations, monitoring, DNS/TLS, SSH endpoints, and public
-web deployment.
+web deployment. The deployment mapping is `site-ops/data/public-surfaces.json`;
+after changing `site/illithid.floatingeye.net/`, validate it from site-ops with
+`python3 scripts/manage_static_site.py check illithid-landing`.
 
 ## Production Changes
 
