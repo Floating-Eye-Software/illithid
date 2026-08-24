@@ -8,3 +8,7 @@ todo-006,ready,0001-reorganize-nethack-repos,planning,P1,todo-002,revise plan 00
 todo-007,todo,0001-reorganize-nethack-repos,verification,P1,todo-004|todo-005|todo-006,verify clean workflow boundaries in nethack and dgamelaunch
 todo-008,done,0001-reorganize-nethack-repos,architecture,P2,todo-002,document the Nexus to NLE5 to future-agent dependency direction
 todo-009,todo,0001-reorganize-nethack-repos,verification,P1,todo-007|todo-008,run cross-repository validation and propose plan closure
+todo-010,ready,0003-illithid-security-modernization,security,P0,,approve the threat model assessment rules of engagement evidence boundary and linked site-ops execution records
+todo-011,todo,0003-illithid-security-modernization,assessment,P0,todo-010,review the redacted external authenticated and supply-chain baseline and approve prioritized remediation
+todo-012,todo,0003-illithid-security-modernization,verification,P1,todo-011,review post-hardening retest recovery and detection evidence and resolve residual security exceptions
+todo-013,todo,0003-illithid-security-modernization,acceptance,P1,todo-012,prepare the security Verification of Effectiveness and request explicit service-owner closure review
