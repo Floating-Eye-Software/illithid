@@ -286,10 +286,6 @@ main {
   color: var(--nethack);
 }
 
-.category-nethack h3 {
-  color: var(--nethack);
-}
-
 .project-card p {
   margin: 0;
   color: var(--muted);
