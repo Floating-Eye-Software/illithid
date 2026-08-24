@@ -1,0 +1,3 @@
+id,status,track,priority,depends_on,notes
+0001-reorganize-nethack-repos,doing,workflow,P0,,establish repository boundaries workflow authority dashboards and validation before public-service modernization
+0002-illithid-public-nethack-service-plan,blocked,service,P1,0001-reorganize-nethack-repos,modernize the public NetHack service after repository topology and workflow setup are verified

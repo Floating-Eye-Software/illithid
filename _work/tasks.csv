@@ -1,0 +1,10 @@
+id,status,plan,track,priority,depends_on,notes
+todo-001,done,0001-reorganize-nethack-repos,workflow,P1,,confirm the public Illithid repository identity visibility main branch and GitHub origin
+todo-002,done,0001-reorganize-nethack-repos,workflow,P0,todo-001,install the canonical FLEY workflow instructions dashboards and local checks
+todo-003,done,0001-reorganize-nethack-repos,governance,P1,todo-001,register Illithid and its workflow-authority relationships in fley-org
+todo-004,ready,0001-reorganize-nethack-repos,records,P1,todo-002,migrate Illithid service-integration records from Nexus without duplicating task authority
+todo-005,ready,0001-reorganize-nethack-repos,operations,P1,todo-002,reconcile site-ops plan 0007 and operational references with the Illithid service workflow
+todo-006,ready,0001-reorganize-nethack-repos,planning,P1,todo-002,revise plan 0002 ownership language and register initial Phase 0 service tasks
+todo-007,todo,0001-reorganize-nethack-repos,verification,P1,todo-004|todo-005|todo-006,verify clean workflow boundaries in nethack and dgamelaunch
+todo-008,done,0001-reorganize-nethack-repos,architecture,P2,todo-002,document the Nexus to NLE5 to future-agent dependency direction
+todo-009,todo,0001-reorganize-nethack-repos,verification,P1,todo-007|todo-008,run cross-repository validation and propose plan closure

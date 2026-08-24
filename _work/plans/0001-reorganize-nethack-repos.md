@@ -1,6 +1,6 @@
 # 0001 - Establish the NetHack Repository and Workflow Topology
 
-**Status:** Proposed  
+**Status:** In progress
 **Prepared:** 2026-08-24  
 **Owner:** Illithid public NetHack service  
 **Priority:** P0
@@ -136,8 +136,9 @@ Nexus engine → NLE5 adapter → future agent
 
 ## Illithid Repository Setup
 
-The Illithid directory currently contains planning material but is not yet a
-complete repository workflow. Establish it deliberately.
+The Illithid repository now has a confirmed public GitHub identity and a local
+FLEY workflow. Complete the remaining record routing and cross-repository
+verification deliberately.
 
 Required setup:
 
@@ -297,4 +298,3 @@ Create stable task identifiers in the Illithid dashboard for at least:
 3. Establish the minimum workflow surface and dashboards.
 4. Update the FLEY authority relationships.
 5. Route the existing integration records and reconcile plan 0002.
-

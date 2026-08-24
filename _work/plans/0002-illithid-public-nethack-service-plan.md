@@ -1,6 +1,6 @@
 # Illithid Public NetHack Service Modernization Plan
 
-**Status:** Proposed  
+**Status:** Blocked by plan 0001 repository-topology verification
 **Prepared:** 2026-08-24  
 **Service:** `illithid` / `ssh nethack@floatingeye.net`  
 **Purpose:** Bring Illithid to the normal level of service expected from a mature public NetHack server while preserving every recoverable active game.
@@ -293,4 +293,3 @@ The modernization is complete only when all of the following are true:
 - [Hardfought RC editor](https://www.hardfought.org/nethack/rcedit/) — authenticated web editing model.
 - [The November NetHack Tournament](https://tnnt.org/) and [TNNT backend](https://github.com/tnnt-devteam/python-backend) — tournament-specific centralized operation and telemetry.
 - [NetHack Scoreboard Matter README](https://github.com/nethackscoreboard-org/matter#readme) — server feed ingestion details.
-
