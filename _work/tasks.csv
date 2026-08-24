@@ -12,3 +12,11 @@ todo-010,ready,0003-illithid-security-modernization,security,P0,,approve the thr
 todo-011,todo,0003-illithid-security-modernization,assessment,P0,todo-010,review the redacted external authenticated and supply-chain baseline and approve prioritized remediation
 todo-012,todo,0003-illithid-security-modernization,verification,P1,todo-011,review post-hardening retest recovery and detection evidence and resolve residual security exceptions
 todo-013,todo,0003-illithid-security-modernization,acceptance,P1,todo-012,prepare the security Verification of Effectiveness and request explicit service-owner closure review
+todo-014,todo,0004-floatingeye-nethack-5,baseline,P0,todo-007,fetch official NetHack refs pin deployed and target baselines and produce the complete Floating Eye patch disposition matrix
+todo-015,todo,0004-floatingeye-nethack-5,nethack,P0,todo-014,reconstruct update build and verify Floating Eye on the selected NetHack 3.7 baseline without risking legacy saves
+todo-016,todo,0004-floatingeye-nethack-5,nethack,P0,todo-015,port QueerHack PetHack gluten-free conduct and all accepted service changes to the selected NetHack 5.0 baseline
+todo-017,todo,0004-floatingeye-nethack-5,integration,P0,todo-015|todo-016,build versioned reproducible 3.7 and 5.0 runtimes with disjoint state and artifact paths
+todo-018,todo,0004-floatingeye-nethack-5,dgamelaunch,P0,todo-017,implement explicit 3.7 and 5.0 dgamelaunch choices with fail-closed legacy-save dispatch and live watching
+todo-019,todo,0004-floatingeye-nethack-5,verification,P0,todo-018,run patch regression save-isolation multi-version restore rollback and migration rehearsal in staging
+todo-020,todo,0004-floatingeye-nethack-5,deployment,P0,todo-019|todo-012,coordinate the authorized backup-gated production deployment and soak through site-ops
+todo-021,todo,0004-floatingeye-nethack-5,publication,P1,todo-020,update public documentation feeds and the NetHackWiki listing then request explicit plan closure review

@@ -1,5 +1,53 @@
 # Illithid Codex Log
 
+## 2026-08-24 - Floating Eye 3.7 and 5.0 Planning
+
+Created plan `0004-floatingeye-nethack-5` as the source and multi-version
+integration work package for the public-service modernization. The plan will
+refresh the stale vanilla 3.7 baseline, reconstruct and update the Floating Eye
+3.7 line, port every accepted variant change to a pinned official NetHack 5.0
+line, and provide explicit dgamelaunch choices for both game versions.
+
+The plan preserves the exact deployed legacy 3.7 runtime for existing saves,
+requires disjoint versioned state and artifacts, and treats every patch through
+a recorded port/upstream/externalize/retire disposition. It coordinates
+production execution with the recovery and security gates in plans 0002 and
+0003. Registered tasks `todo-014` through `todo-021` cover baselines, both
+source lines, runtime packaging, dgamelaunch integration, staging verification,
+controlled deployment, and publication.
+
+The existing local refs showed `floatingeye` 38 commits behind the locally
+available vanilla 3.7 ref, not 50, but both refs were stale. Plan 0004 therefore
+requires a fetch and refreshed divergence record before implementation.
+
+Session wrap-up:
+
+- `make check-work` passed with four active plans and sixteen active tasks;
+- `git diff --check` passed;
+- plan 0001 remains in progress with `todo-004`, `todo-006`, `todo-007`, and
+  `todo-009` incomplete;
+- plan 0004 remains blocked by plan 0001, and its first executable work is
+  `todo-014` after the workflow-boundary verification dependency is complete;
+- no plan is ready for closure; and
+- no production mutation was authorized or performed.
+
+No NetHack source, sibling repository, or production service was changed.
+
+## 2026-08-24 - Floating Eye Variant Inventory
+
+Added `FLOATINGEYE.md` as a descriptive inventory of the NetHack 3.7 variant
+used by the Illithid service. It separates gameplay patches, public-service
+integration, build and configuration differences, maintainer preferences, and
+experimental work that is not merged into the service branch. The inventory
+uses `QueerHack` as the canonical name for the historical Queer Characters
+patch family, records `consent` and `gender` as former branch names, and
+documents the misleading current `gender` and `pethack` refs. It also records
+observed commit identifiers for the aggregate, PetHack, gluten-free conduct,
+and unmerged stdio window-port work. The NetHackWiki public-server page is
+recorded as the service's community-maintained listing.
+
+No source branch, production service, or sibling repository was changed.
+
 ## 2026-08-24 - Repository Workflow Adoption
 
 Installed the minimum FLEY repository workflow surface for the public Illithid
