@@ -1,5 +1,39 @@
 # Illithid Codex Log
 
+## 2026-08-24 - Dgamelaunch Game Catalog Planning
+
+Created plan `0005-dgamelaunch-game-catalog` to add What Fools These Mortals,
+Rogue Clone IV, and a small licensed Z-machine interactive-fiction catalog to
+the public dgamelaunch service. The plan uses the maintainer's public
+`mlehotay/WhatFools` and `mlehotay/rogue` forks as the initial source lines,
+requires a Python 3 port for WhatFools and a supported Linux/ncurses port for
+Rogue Clone IV, and compares Frotz with Bocfel before choosing a terminal
+Z-machine interpreter.
+
+The plan requires an explicit per-story redistribution license, isolated
+per-player and per-game state, ttyrec and watching verification, resource
+limits, reproducible packages, staging security/failure tests, and a
+backup-gated site-ops deployment. Registered tasks `todo-022` through
+`todo-029`. Plan 0005 remains blocked by plan 0001 and its dgamelaunch
+integration depends on the common versioned menu work in plan 0004.
+
+Cross-repository review confirmed that Illithid owns game-catalog integration,
+`fley-org` owns project/repository identity, and `site-ops` owns the host,
+chroot deployment, SSH behavior, backups, monitoring, and production
+verification. No sibling repository or production service was changed.
+
+Session wrap-up:
+
+- added `FLOATINGEYE-DOSSIER-PROPOSAL.md` as maintainer-authored exploratory
+  input; it remains a proposal and does not create executable workflow tasks;
+- updated `AGENTS.md` so future cross-project questions begin with read-only
+  inspection of the owning `fley-org` or `site-ops` records;
+- the Windows `Zone.Identifier` metadata sidecar was removed before commit;
+- plans 0001, 0002, 0004, and 0005 remain open, with plans 0004 and 0005
+  blocked by the plan 0001 workflow-boundary work;
+- no plan is ready for closure; and
+- no sibling repository or production service was changed.
+
 ## 2026-08-24 - Floating Eye 3.7 and 5.0 Planning
 
 Created plan `0004-floatingeye-nethack-5` as the source and multi-version

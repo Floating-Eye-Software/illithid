@@ -3,3 +3,4 @@ id,status,track,priority,depends_on,notes
 0002-illithid-public-nethack-service-plan,blocked,service,P1,0001-reorganize-nethack-repos,modernize the public NetHack service after repository topology and workflow setup are verified
 0003-illithid-security-modernization,ready,security,P0,,establish and continuously verify a modern security baseline including HTTPS bounded assessment hardening recovery and retesting
 0004-floatingeye-nethack-5,blocked,service,P0,0001-reorganize-nethack-repos,update Floating Eye 3.7 port the complete variant to NetHack 5.0 and provide isolated player-selectable 3.7 and 5.0 runtimes
+0005-dgamelaunch-game-catalog,blocked,service,P1,0001-reorganize-nethack-repos,add What Fools These Mortals Rogue Clone IV and a licensed curated Z-machine story catalog to dgamelaunch

@@ -25,6 +25,20 @@ Before making code or content changes, read:
 
 Check `git status` before editing and preserve unrelated user changes.
 
+## Cross-Repository Context
+
+- Before asking the user or making assumptions about another FLEY project,
+  inspect the relevant records in the sibling `../fley-org` repository.
+- Before asking the user or making assumptions about existing infrastructure,
+  hosting, deployment, backup, DNS/TLS, monitoring, or other operations,
+  inspect the relevant records in the sibling `../site-ops` repository.
+- Read and follow the target repository's `AGENTS.md` before inspecting its
+  workflow records. Treat cross-repository inspection as read-only unless the
+  user's request explicitly authorizes changes there.
+- Keep executable work and authoritative records in their owning repository;
+  reference cross-repository records rather than duplicating their contents in
+  Illithid.
+
 ## Authority And Routing
 
 - Illithid owns public-service integration work spanning dgamelaunch and the

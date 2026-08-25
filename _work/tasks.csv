@@ -20,3 +20,11 @@ todo-018,todo,0004-floatingeye-nethack-5,dgamelaunch,P0,todo-017,implement expli
 todo-019,todo,0004-floatingeye-nethack-5,verification,P0,todo-018,run patch regression save-isolation multi-version restore rollback and migration rehearsal in staging
 todo-020,todo,0004-floatingeye-nethack-5,deployment,P0,todo-019|todo-012,coordinate the authorized backup-gated production deployment and soak through site-ops
 todo-021,todo,0004-floatingeye-nethack-5,publication,P1,todo-020,update public documentation feeds and the NetHackWiki listing then request explicit plan closure review
+todo-022,todo,0005-dgamelaunch-game-catalog,baseline,P1,todo-007,pin game sources confirm cross-repository authority inventory production remnants and approve the catalog license and metadata model
+todo-023,todo,0005-dgamelaunch-game-catalog,whatfools,P1,todo-022,port What Fools These Mortals to supported Python 3 and add deterministic runtime and failure tests
+todo-024,todo,0005-dgamelaunch-game-catalog,rogue,P1,todo-022,restore a supported Linux ncurses build for Rogue Clone IV with safe player save score and failure behavior
+todo-025,todo,0005-dgamelaunch-game-catalog,interactive-fiction,P1,todo-022,compare Frotz and Bocfel approve a terminal interpreter and curate a small explicitly licensed Z-machine story set
+todo-026,todo,0005-dgamelaunch-game-catalog,dgamelaunch,P1,todo-018|todo-023|todo-024|todo-025,integrate the reviewed game catalog with versioned menus isolated state in-progress tracking watching and ttyrecs
+todo-027,todo,0005-dgamelaunch-game-catalog,verification,P1,todo-026,run functional isolation malformed-input resource recording restore and rollback tests for the complete catalog in staging
+todo-028,todo,0005-dgamelaunch-game-catalog,deployment,P1,todo-012|todo-020|todo-027,coordinate the authorized backup-gated catalog deployment and soak through site-ops
+todo-029,todo,0005-dgamelaunch-game-catalog,publication,P2,todo-028,publish accurate catalog source license recording save score and support information then request explicit plan closure review
