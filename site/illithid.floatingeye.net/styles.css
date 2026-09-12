@@ -180,6 +180,53 @@ main {
   margin: 0 auto;
 }
 
+.score-header {
+  border-bottom: 1px solid var(--rule);
+  background:
+    linear-gradient(90deg, rgba(247, 244, 237, 0.96), rgba(247, 244, 237, 0.76)),
+    radial-gradient(circle at 82% 24%, rgba(35, 93, 138, 0.16), transparent 30%),
+    var(--paper);
+}
+
+.score-intro {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0 64px;
+}
+
+.score-intro h1 {
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+}
+
+.snapshot-note,
+.score-list {
+  padding: 48px 0;
+}
+
+.snapshot-note {
+  border-bottom: 1px solid var(--rule);
+}
+
+.snapshot-note > p {
+  max-width: 780px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.score-list pre {
+  max-height: 75vh;
+  margin: 24px 0 64px;
+  padding: 22px;
+  overflow: auto;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: #101616;
+  color: #f3f1df;
+  box-shadow: var(--shadow);
+  font-size: 0.86rem;
+  line-height: 1.5;
+}
+
 .status-band {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
