@@ -59,3 +59,8 @@ Fast-forwarded and pushed that branch to `df68139c3`; deleted the temporary
 branch name. The integration worktree remains detached at the same commit
 with its build artifacts. This changes source publication only; no production
 release or plan closure was authorized.
+
+The main `~/projects/nethack` checkout now builds the same 3.7 source
+successfully with `hints/floatingeye`. The temporary integration worktree
+was removed at the maintainer's request. Build verification remains
+compile/version only; save and gameplay tests are still open.

@@ -270,3 +270,13 @@ points to df68139c3. Detached the build worktree at that commit and deleted
 the temporary `floatingeye-3.7-final` local branch. No temporary remote
 branch was created. The compiled binary remains in the detached worktree.
 Production was not changed.
+
+## 2026-10-21 - Build In Main NetHack Checkout And Remove Trial Worktree
+
+Regenerated stale Makefiles, cleaned generated artifacts, and rebuilt
+`floatingeye` at df68139c3 in `~/projects/nethack` using the existing
+server hints and checksum-verified Lua 5.4.8. `make -j1 all` completed;
+`src/nethack --version` reports 3.7.0-143 WIP. Main binary SHA-256 is
+`46400e1e63cdcf05920dcdbdba61d03f1b628c7c1c24682e09e56ba95ad95b6e`.
+Removed the temporary `nethack-37-integration` worktree. Source checkout
+remains clean. No install, deployment, or save test was performed.
