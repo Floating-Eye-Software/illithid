@@ -16,8 +16,8 @@ Last update: 2026-10-21
   site-ops
 
 ### NetHack source and game catalog
-* final upstream 3.7 merged and built locally; committed source in a separate
-  NetHack worktree; plan 0006 in review; production unchanged
+* final upstream 3.7 merged and built locally, now on the published
+  `floatingeye` branch; plan 0006 in review; production unchanged
 * plan the Floating Eye NetHack 5 direction and the curated dgamelaunch game
   catalog, including isolated player-selectable runtimes
 * both service expansion fronts remain dependent on the repository-boundary

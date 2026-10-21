@@ -53,3 +53,9 @@ Maintainer requested committing all work. Source merge committed as
 `df68139c3040dcabd8257a6f6c72ef6f2aeea592` on `floatingeye-3.7-final`;
 production and the original `floatingeye` checkout remain unchanged.
 Plan closure has not been requested.
+
+The maintainer then requested using the existing `floatingeye` branch.
+Fast-forwarded and pushed that branch to `df68139c3`; deleted the temporary
+branch name. The integration worktree remains detached at the same commit
+with its build artifacts. This changes source publication only; no production
+release or plan closure was authorized.

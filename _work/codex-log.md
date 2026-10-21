@@ -259,3 +259,14 @@ Plan 0006 stays in review pending explicit closure approval.
 Validation: Illithid plan/task checks and whitespace checks pass. Full
 `make check-work` remains blocked by the pre-existing unchanged canonical
 workflow-copy drift. Site-ops `make check-work` passed for its task changes.
+
+## 2026-10-21 - Publish Final 3.7 Merge On Floating Eye
+
+Maintainer requested the existing `floatingeye` branch rather than a new
+branch. Confirmed `origin/floatingeye` was still d888d640e and the merge
+commit df68139c3 descended from it. Fast-forwarded the original turnip
+checkout and pushed `floatingeye:floatingeye` without force. Remote now
+points to df68139c3. Detached the build worktree at that commit and deleted
+the temporary `floatingeye-3.7-final` local branch. No temporary remote
+branch was created. The compiled binary remains in the detached worktree.
+Production was not changed.
