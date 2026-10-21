@@ -155,3 +155,107 @@ for the homepage, stylesheet, robots file, PNG hero image, and favicon. The
 obsolete JPEG was removed from production after its exact path was confirmed
 unreferenced and backed up; it now returns 404. HTTPS still timed out after ten
 seconds, consistent with the open TLS problem addressed by plan `0003`.
+
+## 2026-10-21 - Refresh Public NetHack High Scores
+
+Replaced the September 12 score snapshot with the maintainer-provided
+October 21 output from `sudo chroot /opt/dgl /nh370/nethack -s -v all`,
+saved on Illithid as `illithid-high-scores-2026-10-21.txt`. The list now
+contains 94 retained scores; updated the homepage count and both page dates.
+Validated consecutive ranks, descending points, and exact decoded HTML text
+against the saved output. No game runtime or player state was changed.
+
+Deployed only `index.html` and `scores.html` to `/var/www/html/` through
+site-ops `scripts/manage_static_site.py` and its `illithid-landing` mapping.
+The pre-deployment web-root backup and matching receipt are at
+`/tmp/illithid-landing-20261021-scores/` (temporary rollback storage).
+Source validation and deployment preview passed. Both live HTTP pages
+returned successfully and matched local source by SHA-256:
+
+- `scores.html`: `30aabee2e57c33b57763a378579da02dc0d73dde27612dfc13f0acf9c04cc58b`
+- `index.html`: `02203cb0159ae543d6eb1ec2a4d42aeb5bc88e32a9473d3c587aa23c1ab64022`
+
+Changes remain uncommitted. This refresh does not change the modernization
+plan's execution state or establish automatic score publication.
+
+Verification limits: HTTPS still timed out after 10 seconds, matching the
+previously recorded TLS gap; HTTP is the verified publication transport.
+`make check-work` stopped on pre-existing `unreviewed-drift` in the unchanged
+`_work/repo-workflow.md` canonical-copy check.
+
+## 2026-10-21 - Read-Only Saved-Game Inventory
+
+At 09:44 EDT, inspected only save-file metadata, launcher status files,
+process names, and iia dumplog filenames on Illithid. Found 40 primary
+`*.gz` saves and 22 `*.gz.bak` files in `/opt/dgl/nh370/var/save`,
+an empty launcher in-progress directory, and no running NetHack or
+dgamelaunch processes. Primary saves are candidates for continuation;
+validity and compatibility were not tested by resuming them.
+
+The May 22 site-ops observation explicitly identifies iia at D38. The
+current published #1 score is also iia (1,933,968 points; escaped; maximum
+depth 49), but available readable evidence does not establish that these
+are the same game. The current iia save was modified September 28 at
+05:06 EDT; its last launcher status says D3. Launcher status files can be
+stale and were not treated as authoritative decoded save contents.
+
+Game logs, save contents, and iia dumplog contents are permission-protected.
+No sudo access was available, no save was opened by NetHack, no raw player
+state was copied into the repository, and production was unchanged.
+Matching iia's completed-game start/end dates and score from the protected
+xlogfile would resolve more of the historical identity question.
+
+## 2026-10-21 - Identify iia's May Deep-Level Game
+
+Read the maintainer-extracted `/home/mlehotay/iia-games.tsv` on Illithid
+without changing production. Its five completed-game records establish
+that iia's #1 score (1,933,968) was an elven female chaotic Wizard,
+started July 24, 2025 at 10:34:35 EDT and ended May 27, 2026 at
+10:07:12 EDT by escaping, with maximum depth 49 and 71,322 turns.
+Recorded active playing time was 165,090 seconds (45h 51m 30s).
+
+This is the game matching the May 22, 2026 site-ops observation of iia
+at D38: its lifetime spans that observation; the preceding recorded
+games ended in July 2025 and the next recorded games began May 27, 2026.
+The launcher's May 22 start timestamp described that session, whereas
+xlog starttime identifies the original game start. The exact recalled
+D39 moment is not independently established by these records.
+
+The later Tourist game started May 27 and ended September 28 at
+04:07:06 EDT with 2,942 points. The present primary save was modified
+at 05:06:08 that day and therefore represents a subsequent game; its
+last launcher status is D3. No saves or account data were copied into Git.
+
+## 2026-10-21 - Build Final Upstream 3.7 With Floating Eye
+
+Maintainer requested a local final-3.7 build and explicitly deferred 5.0.
+Created plan 0006 and completed task 030 independently of the full migration
+gates in plan 0004. Verified Illithid's source clone is clean at 632276732
+and its build executable matches the deployed legacy binary. Turnip's clean
+source is at d888d640e. Fetched official final-3.7 b63ec1faa, resolved three
+conflicting files in a separate NetHack worktree on floatingeye-3.7-final,
+and built successfully with the existing Floating Eye server hints and
+verified Lua 5.4.8. Serial build avoids a recursive Lua parallel-build race.
+
+Binary reports 3.7.0-143 WIP, not an official stable 3.7 release. Exact
+source tree, build commands, artifact hashes, conflict review, diagnostics,
+and verification limits are recorded in `_work/notes/final-37-build-2026-10-21.md`.
+The source merge is staged and uncommitted; original checkout and production
+are unchanged. No installation or save-continuation test occurred. Plan 0006
+remains in review; 5.0 and production rollout remain separate.
+
+## 2026-10-21 - Commit Session Work
+
+Maintainer explicitly requested committing all work across Illithid, the
+NetHack integration worktree, and site-ops. Committed the resolved NetHack
+merge as `df68139c3040dcabd8257a6f6c72ef6f2aeea592` on
+`floatingeye-3.7-final`; its tree matches the previously verified build
+source. Updated the build report and quick status to reflect committed
+source. Illithid retains the score refresh and deployment evidence,
+saved-game investigation findings, and final-3.7 build records. Site-ops
+retains the deferred Ubuntu upgrade task. No push or further deployment.
+Plan 0006 stays in review pending explicit closure approval.
+
+Validation: Illithid plan/task checks and whitespace checks pass. Full
+`make check-work` remains blocked by the pre-existing unchanged canonical
+workflow-copy drift. Site-ops `make check-work` passed for its task changes.

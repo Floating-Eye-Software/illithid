@@ -28,3 +28,4 @@ todo-026,todo,0005-dgamelaunch-game-catalog,dgamelaunch,P1,todo-018|todo-023|tod
 todo-027,todo,0005-dgamelaunch-game-catalog,verification,P1,todo-026,run functional isolation malformed-input resource recording restore and rollback tests for the complete catalog in staging
 todo-028,todo,0005-dgamelaunch-game-catalog,deployment,P1,todo-012|todo-020|todo-027,coordinate the authorized backup-gated catalog deployment and soak through site-ops
 todo-029,todo,0005-dgamelaunch-game-catalog,publication,P2,todo-028,publish accurate catalog source license recording save score and support information then request explicit plan closure review
+todo-030,done,0006-floatingeye-final-37-build,build,P1,,inspect server and local source baselines then resolve an isolated final-3.7 merge and compile the Floating Eye server binary without deployment
